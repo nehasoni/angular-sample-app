@@ -1,0 +1,50 @@
+<div ng-controller="productListController">
+    <div class="header" style="margin-bottom:0px">
+        <div class="navbar navbar-default" role="navigation" style="margin-bottom:0px">
+            <div class="container-fluid">
+                <div class="row" style="padding-top:16px;padding-bottom:16px">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" ng-model="query" placeholder="Search By Name" style="width:50%"/>
+                    </div>
+                    <div class="btn-group col-md-3">
+                        <button type="button" class="btn btn-default dropdown-toggle col-md-8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{selected == '' ? "Filter By Category" : selected}}<span class="caret" style="margin-left:4%"></span>
+                        </button>
+                        <ul class="dropdown-menu col-md-4" ng-init="selected=''" style="left:15px;width:32%">
+                            <li><a ng-click=filterByCategory('')>All</a></li>
+                            <li ng-repeat="category in categories">
+                                <a ng-click=filterByCategory(category)>{{category}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group col-md-3">
+                        <button type="button" class="btn btn-default dropdown-toggle col-md-8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{selectedPrice == 'All' ? "Filter By Price" : selectedPrice.startPrice + " - " + selectedPrice.endPrice}}<span class="caret" style="margin-left:4%"></span>
+                        </button>
+                        <ul class="dropdown-menu col-md-4" ng-init="selectedPrice='All'" style="left:15px;width:32%">
+                            <li><a ng-click=filterByPrice('All')>All</a></li>
+                            <li ng-repeat="price in priceRanges">
+                                <a ng-click=filterByPrice(price)>{{price.startPrice}} - {{price.endPrice}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="books" >
+
+    <div class="row col-md-12">
+        <div class="book-panel col-md-5" ng-repeat="book in books |filter: query|filter:catFilter(selected)|filter:priceFilter(selectedPrice)| orderBy: 'name'">
+            Name: {{book.name}}<br/>
+            Author: {{book.author}}<br/>
+            Price: ₹ {{book.price}}<br/>
+            Category: {{book.category}}
+            <div class="text-right">
+                <img src="{{book.imageUrl}}" bookimage/>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
