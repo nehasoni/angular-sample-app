@@ -4,8 +4,8 @@
 
 #### Get the Code
 Either clone this repository or fork it on GitHub and clone your fork:
+
 ```https://github.com/nehasoni/angular-sample-app.git```
 
-#### For a running app, deploy the code.
 
 
