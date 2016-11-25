@@ -22,10 +22,12 @@ Running
 Start the server :
 
 * Run the server
-  `cd angular-sample-app`
-  `npm install`
+  ```
+  cd angular-sample-app
+  npm install
+  ```
 
-* Browse to the application at [http://localhost:5000]
+* Browse to the application at [http://localhost:5000](http://localhost:5000)
 
 
 
