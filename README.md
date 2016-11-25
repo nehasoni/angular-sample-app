@@ -19,13 +19,15 @@ Either clone this repository or fork it on GitHub and clone your fork:
 Running
 ------------
 
-Start the server :
+* Install dependencies
 
-* Run the server
   ```
   cd angular-sample-app
   npm install
   ```
+
+* Run the server
+    `node web.js`
 
 * Browse to the application at [http://localhost:5000](http://localhost:5000)
 
