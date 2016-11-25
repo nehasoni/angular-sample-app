@@ -5,7 +5,7 @@ var App = angular
     .config(function ($routeProvider,$filterProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'app/components/productList/productList.html',
+                templateUrl: 'components/productList/productList.html',
                 controller: 'productListController'
 
             })

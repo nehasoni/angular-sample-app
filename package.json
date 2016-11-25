@@ -20,6 +20,13 @@
     "url": "https://github.com/nehasoni/angular-sample-app/issues"
   },
   "homepage": "https://github.com/nehasoni/angular-sample-app#readme",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "gzippo": "^0.2.0"
+  },
   "scripts": {
     "start": "node web.js"
   }
