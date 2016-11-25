@@ -27,7 +27,9 @@ Running
   ```
 
 * Run the server
-    `node web.js`
+    ```
+    node web.js
+    ```
 
 * Browse to the application at [http://localhost:5000](http://localhost:5000)
 
