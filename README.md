@@ -28,7 +28,7 @@ Running
 
 * Run the server
     ```
-    node web.js
+    npm start
     ```
 
 * Browse to the application at [http://localhost:5000](http://localhost:5000)
